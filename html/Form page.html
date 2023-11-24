@@ -1,5 +1,5 @@
 <html>
-    <link rel="stylesheet" type="text/css" href="../css/style.css"
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <head>
         <div class="#" style="margin-top: 30px; margin-left: 40%; font-size: 30px;">Our activities form</div>
     </head>
@@ -15,6 +15,23 @@
         <label for="email">Email (@dome) : </label>
         <input type="email" id="email" name="email" required="required">
         <input type="button" onclick="validateEmail();" value="validate"><br>
+        <label for="ActivityName">Activity Name</label>
+        <input type="text" id="ActivityName" name="ActivityName" required="required"><br>   
+        <label for="ActivityType">ActivityType</label>
+        <select id="ActivityType" name="ActivityType"><br>
+          <option value="" disabled="" selected="">Select a type</option>
+          <option value="FacultyAct">Faculty Activity</option>
+          <option value="FirstMeet">First Meet</option>
+          <option value="Training">Training</option>
+          <option value="Sports">Sports</option>
+          <option value="Trips">Trips</option>
+          <option value="Events">Events</option>
+          <option value="Others">Others</option>
+        </select><br>
+        <label for="Date">Date</label>
+        <input type="date" id="Date" name="Date" required="required"><br>
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" required="required"><br>
         <input type="submit" onclick="output();" value="Submit">
     </center>
     </form>
