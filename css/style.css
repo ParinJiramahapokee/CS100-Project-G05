@@ -2,21 +2,41 @@ body, html {
     height: 100%;
     margin: 0;
   }
-  
+
+  /*bg color*/
   .gradient {
-    background: linear-gradient(300deg,deepskyblue,darkviolet,blue,#62cec2,#43efdc,#a6d6d1);
-    background-size: 360% 360%;
-    animation: gradient-animation 36s ease infinite;
+    animation: animateBg 14s linear infinite;
+    background-image: linear-gradient(0deg,#2cdd90,#7bd0e5,#5351e1,#2cdd90,#7bd0e5);
+    background-size: 100% 400%;
+  }
+  @keyframes animateBg {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 100%; }
   }
   
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  /*text*/
+  .header{
+    margin-top: 20px;
+    margin-left: 42%;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: aliceblue;
+    font-family: Impact;
+  }
+  .formbg{
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 31%;
+    background-color: #ebf5f2;
+    border-radius: 10%;
+    opacity: 90%;
+  }
+  .fname{
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  .txt{
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', sans-serif;
   }

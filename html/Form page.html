@@ -1,24 +1,24 @@
 <html>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <head>
-        <div class="#" style="margin-top: 30px; margin-left: 40%; font-size: 30px;">Our activities form</div>
+        <div class="Header">Our activities form</div>
     </head>
-    <body class="Gradient">
-            <form id="form" action="">
+    <body class="gradient">
+            <form id="form" action="" class="formbg">
     <center>
-        <label for="Fullname">Full name (in English) : </label>
-        <input type="text" id="Fullname" name="Fullname" required="required">
+        <label for="Fullname" class="txt">Full name (in English) : </label>
+        <input type="text" id="Fullname" class="fname" name="Fullname" required="required">
         <input type="button" onclick="validatename();" value="check"><br>
-        <label for="StudentID">Student ID : </label>
-        <input type="text" id="ID" name="ID" required="required">
+        <label for="StudentID" class="txt">Student ID : </label>
+        <input type="text" id="ID" name="ID" class="txt" required="required">
         <input type="button" onclick="validateID();" value="check"><br>
-        <label for="email">Email (@dome) : </label>
-        <input type="email" id="email" name="email" required="required">
+        <label for="email" class="txt">Email (@dome) : </label>
+        <input type="email" id="email" name="email" class="txt" required="required">
         <input type="button" onclick="validateEmail();" value="validate"><br>
-<label for="ActivityName">Activity Name</label>
-        <input type="text" id="ActivityName" name="ActivityName" required="required"><br>   
-        <label for="ActivityType">ActivityType</label>
-        <select id="ActivityType" name="ActivityType"><br>
+        <label for="ActivityName" class="txt">Activity Name :</label>
+        <input type="text" id="ActivityName" name="ActivityName" class="txt" required="required"><br>   
+        <label for="ActivityType" class="txt">Activity Type :</label>
+        <select id="ActivityType" name="ActivityType" class="txt"><br>
           <option value="" disabled="" selected="">Select a type</option>
           <option value="FacultyAct">Faculty Activity</option>
           <option value="FirstMeet">First Meet</option>
@@ -28,15 +28,30 @@
           <option value="Events">Events</option>
           <option value="Others">Others</option>
         </select><br>
-        <label for="Date">Date</label>
-        <input type="date" id="Date" name="Date" required="required"><br>
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location" required="required"><br>
+        <label for="Date" class="txt">Date : </label>
+        <input type="date" id="Date" name="Date" required="required" class="txt"><br>
+        <label for="location" class="txt">Location : </label>
+        <input type="text" id="location" name="location" required="required" class="txt"><br>
         <input type="submit" onclick="output();" value="Submit">
     </center>
     </form>
     <div id="output" style="text-align: center;"></div>
     <script>
+    /*attempt to click outside the input field and I have lose my mind rn
+        function isClickOutsideElement(event) {
+        var element = document.getElementById('Fullname');
+        var element2 = Fullname.event;
+        if (element.contains(event.element2)) {
+            return false;
+        } else {
+            return true;
+            }
+    }
+    Fullname.addEventListener('click', function(event));{
+        if (isClickOutsideElement(validatename())){
+        console.void('Clicked outside the element');
+        }
+    };*/
         function validatename(){
             var regname = /^[a-zA-Z]+ [a-zA-Z]+$/;
             var Fullname = document.getElementById('Fullname').value;
@@ -82,7 +97,11 @@
                 const fullname = document.getElementById('Fullname').value;
                 const ID = document.getElementById('ID').value;
                 const email = document.getElementById('email').value;
-                output.innerHTML = '<p>Full name = '+fullname+'</p><br><p>Student ID = '+ID+'</p><br><p>Email = '+email+'</p>';
+                const actN = document.getElementById('ActivityName').value;
+                const actT = document.getElementById('ActivityType').value;
+                const date = document.getElementById('Date').value;
+                const location = document.getElementById('location').value;
+                output.innerHTML = '<p>Full name = '+fullname+'</p><p>Student ID = '+ID+'</p><p>Email = '+email+'</p><p>Activity Name = '+actN+'</p><p>Activity Type = '+actT+'</p><p>Date = '+date+'</p><p>Location = '+location+'</p>';
             }
         }
     </script>
