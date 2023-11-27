@@ -22,9 +22,10 @@ body, html {
     }
   }
 
+  /*Submit button CSS*/
   .submit{
     padding: 15px 40px;
-    background: #dae3e0;
+    background: #C0D6CF;
     border:0;
     border-radius: 25px;
     color: #515856 ;
@@ -79,15 +80,17 @@ body, html {
     opacity: 1;
     right: 15px;
   }
+  /*End of submit button CSS*/
   
   /*text*/
   .header{
-    margin-top: 20px;
-    margin-left: 42%;
-    margin-bottom: 20px;
-    font-size: 30px;
-    color: #515856;
-    font-family: Impact;
+    margin-top: 40px;
+    margin-left: 40%;
+    margin-bottom: 40px;
+    font-size: 50px;
+    color: #EEF0F0;
+    font-family: Bebas Neue;
+    text-decoration: underline;
     text-transform: uppercase;
   }
   .formbg{
@@ -99,9 +102,9 @@ body, html {
     background-color: rgba(255, 255, 255, 0.7);
     /*box shadow*/
     padding: 10px;
-    box-shadow: 10px 10px 60px rgb(61, 61, 61);
-    border-radius: 25px; 
+    box-shadow: 10px 10px 10px #777A7A;
     /*border radius fixed at 25px for Rounded corners*/
+    border-radius: 25px; 
     opacity: 90%;
   }
   .fname{
@@ -113,7 +116,6 @@ body, html {
     margin-bottom: 20px;
     font-family: 'Gill Sans', sans-serif;
     color: #515856;
-    text-align: justify;
   }
   .output1{
     width: 500px;
@@ -123,6 +125,4 @@ body, html {
     margin-left: 31%;
     margin-bottom: 20px;
     font-family: 'Gill Sans', sans-serif;
-    /*border radius fixed at 25px for Rounded corners*/
-    opacity: 90%;
   }
