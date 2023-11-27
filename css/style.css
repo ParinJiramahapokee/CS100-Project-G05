@@ -5,9 +5,9 @@ body, html {
 
   /*bg color*/
   .gradient {
-    background: linear-gradient(300deg,#e1ebe3,#d3dfd5,#c5d2c7,#b7c6ba);
+    background: linear-gradient(300deg,#599cc3,#599ac3,#59C3C3,#88B7B5,#9bcac7,#9accca,#A7CAB1,#c1d6c6,#cce0d1,#ddccea,#d6c1e6,#b19ec0,#847996,#685980);
     background-size: 240% 240%;
-    animation: gradient-animation 24s ease infinite;
+    animation: gradient-animation 17s ease infinite;
   }
   
   @keyframes gradient-animation {
@@ -96,7 +96,10 @@ body, html {
     margin-top: 20px;
     margin-left: 31%;
     margin-bottom: 20px;
-    background-color: #ebf5f2;
+    background-color: rgba(255, 255, 255, 0.7);
+    /*box shadow*/
+    padding: 10px;
+    box-shadow: 10px 10px 60px rgb(61, 61, 61);
     border-radius: 25px; 
     /*border radius fixed at 25px for Rounded corners*/
     opacity: 90%;
@@ -111,4 +114,15 @@ body, html {
     font-family: 'Gill Sans', sans-serif;
     color: #515856;
     text-align: justify;
+  }
+  .output1{
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 31%;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', sans-serif;
+    /*border radius fixed at 25px for Rounded corners*/
+    opacity: 90%;
   }
