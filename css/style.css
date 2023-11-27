@@ -5,13 +5,79 @@ body, html {
 
   /*bg color*/
   .gradient {
-    animation: animateBg 14s linear infinite;
-    background-image: linear-gradient(0deg,#2cdd90,#7bd0e5,#5351e1,#2cdd90,#7bd0e5);
-    background-size: 100% 400%;
+    background: linear-gradient(300deg,#e1ebe3,#d3dfd5,#c5d2c7,#b7c6ba);
+    background-size: 240% 240%;
+    animation: gradient-animation 24s ease infinite;
   }
-  @keyframes animateBg {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 0% 100%; }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .submit{
+    padding: 15px 40px;
+    background: #dae3e0;
+    border:0;
+    border-radius: 25px;
+    color: #515856 ;
+    text-transform: uppercase;
+    font-family: helvetica;
+    font-size: 12px;
+    letter-spacing: 3px;
+    position: relative;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+  
+  .submit::after,
+  .submit::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+      opacity: 0;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .submit::after{
+      width: 30px;
+      height: 1px;
+      background: #515856;
+      transform: translateX(-3px);
+      margin-top: 0px;
+  }
+  
+  .submit::before{
+      content: "";
+      transform: rotate(-135deg) translateX(50%);
+      width: 11px;
+      height: 11px;
+      background: transparent;
+      border-left: 1px solid #515856;
+      border-bottom: 1px solid #515856;
+      margin-top: -1px;
+  }
+  
+  .submit:hover{
+    padding: 15px 60px 15px 20px;
+  }
+  
+  .submit:hover::after,
+  .submit:hover::before{
+    opacity: 1;
+    right: 15px;
   }
   
   /*text*/
@@ -20,23 +86,29 @@ body, html {
     margin-left: 42%;
     margin-bottom: 20px;
     font-size: 30px;
-    color: aliceblue;
+    color: #515856;
     font-family: Impact;
+    text-transform: uppercase;
   }
   .formbg{
     width: 500px;
-    height: 300px;
+    height: 400px;
     margin-top: 20px;
     margin-left: 31%;
+    margin-bottom: 20px;
     background-color: #ebf5f2;
-    border-radius: 10%;
+    border-radius: 25px; 
+    /*border radius fixed at 25px for Rounded corners*/
     opacity: 90%;
   }
   .fname{
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: #515856;
   }
   .txt{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: 'Gill Sans', sans-serif;
+    color: #515856;
+    text-align: justify;
   }
