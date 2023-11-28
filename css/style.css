@@ -3,6 +3,11 @@ body, html {
     margin: 0;
   }
 
+  @font-face {
+    font-family: header;
+    src: url("../font/crewniverse.woff");
+  }
+
   /*bg color*/
   .gradient {
     background: linear-gradient(300deg,#599cc3,#599ac3,#59C3C3,#88B7B5,#9bcac7,#9accca,#A7CAB1,#c1d6c6,#cce0d1,#ddccea,#d6c1e6,#b19ec0,#847996,#685980);
@@ -88,10 +93,11 @@ body, html {
     margin-left: 40%;
     margin-bottom: 40px;
     font-size: 50px;
-    color: #EEF0F0;
-    font-family: Bebas Neue;
-    text-decoration: underline;
+    color: #ffffff;
+    opacity: 0.7;
+    text-shadow: 0 0 8px #000000;
     text-transform: uppercase;
+    font-family: header;
   }
   .formbg{
     width: 500px;
@@ -193,4 +199,11 @@ body, html {
   .tablecontent{
     color: #b19ec0;
     font-family: 'Gill Sans', sans-serif;
+  }
+
+  /*Hide arrow in number input box*/
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
   }
