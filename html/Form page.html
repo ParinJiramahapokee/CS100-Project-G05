@@ -8,8 +8,9 @@
         <label for="Fullname" class="fname">Full name (in English) : </label>
         <input type="text" id="Fullname" class="fnameinput" name="Fullname" required="required">
         <input type="button" onclick="validatename();" value="check"><br>
+        <!--already change into type number-->
         <label for="StudentID" class="txt">Student ID : </label>
-        <input type="text" id="ID" name="ID" class="txtinput" required="required">
+        <input type="number" id="ID" name="ID" class="txtinput" required="required">
         <input type="button" onclick="validateID();" value="check"><br>
         <label for="email" class="txt">Email (@dome) : </label>
         <input type="email" id="email" name="email" required="required" class="txtinput">
@@ -31,6 +32,16 @@
         <input type="date" id="Date" name="Date" required="required" class="txtinput"><br>
         <label for="location" class="txt">Location : </label>
         <input type="text" id="location" name="location" required="required" class="txtinput"><br>
+        <!--Radio-->
+        <label for="Satisfy" class="txt">Activity's Satisfaction</label><br>
+        <!--choice-->
+        <input type="radio" id="Love" name="radio" class="radiocssfirst" value="Love">
+        <label for="radio" class="radiocontent">Love it!</label>
+        <input type="radio" id="neutral" name="radio" class="radiocss" value="neutral">
+        <label for="radio" class="radiocontent">Neutral</label>
+        <input type="radio" id="least" name="radio" class="radiocss" value="least">
+        <label for="radio" class="radiocontent">Need improvement</label>
+        <!--Submit + function output triggered-->
         <button type="submit" class="submit" onclick="output();">Submit</button>
     </form>
     <table class="table">
@@ -49,13 +60,13 @@
                 <td><div id="outputlocation" class="tablecontent"></div></td>
                 <td><div id="outputsubmittedby" class="tablecontent"></div></td>
             </tr>
-            <tr>
-                <td><div id="outputactN1" class="tablecontent"></div></td>
+            <!--<tr>
+                <td><div id="outputactN" class="tablecontent"></div></td>
                 <td><div id="outputactT1" class="tablecontent"></div></td>
                 <td><div id="outputdate1" class="tablecontent"></div></td>
                 <td><div id="outputlocation1" class="tablecontent"></div></td>
                 <td><div id="outputsubmittedby1" class="tablecontent"></div></td>
-            </tr>
+            </tr>-->
         </tbody>
     </table>
     <script>
@@ -114,7 +125,7 @@
         function output(){
             const form = document.getElementById('form')
             const output = document.getElementById('output')
-            form.addEventListener('submit',function(event){});{
+                form.addEventListener('submit',function(event){});{
                 event.preventDefault();
                 const fullname = document.getElementById('Fullname').value;
                 const ID = document.getElementById('ID').value;

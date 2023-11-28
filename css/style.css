@@ -95,7 +95,7 @@ body, html {
   }
   .formbg{
     width: 500px;
-    height: 400px;
+    height: 700px;
     margin-top: 20px;
     margin-left: 31%;
     margin-bottom: 20px;
@@ -123,13 +123,13 @@ body, html {
   }
   .txt{
     margin-left: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-family: 'Gill Sans', sans-serif;
     color: #515856;
   }
   .txtinput{
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-family: 'Gill Sans', sans-serif;
     color: #515856;
   }
@@ -141,6 +141,23 @@ body, html {
     margin-left: 31%;
     margin-bottom: 20px;
     font-family: 'Gill Sans', sans-serif;
+  }
+  .radiocssfirst{
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .radiocss{
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+  .radiocontent{
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    font-family: 'Gill Sans', sans-serif;
+    color: #515856;
   }
 
   /*Table*/
