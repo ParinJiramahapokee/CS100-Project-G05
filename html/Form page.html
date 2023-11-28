@@ -5,22 +5,21 @@
     </head>
     <body class="gradient">
             <form id="form" action="" class="formbg">
-    <center>
-        <label for="Fullname" class="txt">Full name (in English) : </label>
-        <input type="text" id="Fullname" class="fname" name="Fullname" required="required">
+        <label for="Fullname" class="fname">Full name (in English) : </label>
+        <input type="text" id="Fullname" class="fnameinput" name="Fullname" required="required">
         <input type="button" onclick="validatename();" value="check"><br>
         <label for="StudentID" class="txt">Student ID : </label>
-        <input type="text" id="ID" name="ID" class="txt" required="required">
+        <input type="text" id="ID" name="ID" class="txtinput" required="required">
         <input type="button" onclick="validateID();" value="check"><br>
         <label for="email" class="txt">Email (@dome) : </label>
-        <input type="email" id="email" name="email" class="txt" required="required">
+        <input type="email" id="email" name="email" required="required" class="txtinput">
         <input type="button" onclick="validateEmail();" value="validate"><br>
         <label for="ActivityName" class="txt">Activity Name :</label>
-        <input type="text" id="ActivityName" name="ActivityName" class="txt" required="required"><br>   
+        <input type="text" id="ActivityName" name="ActivityName" class="txtinput" required="required"><br>   
         <label for="ActivityType" class="txt">Activity Type :</label>
-        <select id="ActivityType" name="ActivityType" class="txt"><br>
+        <select id="ActivityType" name="ActivityType" class="txtinput"><br>
           <option value="" disabled="" selected="">Select a type</option>
-          <option value="FacultyAct">Faculty Activity</option>
+          <option value="Faculty Activity">Faculty Activity</option>
           <option value="FirstMeet">First Meet</option>
           <option value="Training">Training</option>
           <option value="Sports">Sports</option>
@@ -29,13 +28,36 @@
           <option value="Others">Others</option>
         </select><br>
         <label for="Date" class="txt">Date : </label>
-        <input type="date" id="Date" name="Date" required="required" class="txt"><br>
+        <input type="date" id="Date" name="Date" required="required" class="txtinput"><br>
         <label for="location" class="txt">Location : </label>
-        <input type="text" id="location" name="location" required="required" class="txt"><br>
+        <input type="text" id="location" name="location" required="required" class="txtinput"><br>
         <button type="submit" class="submit" onclick="output();">Submit</button>
-    </center>
     </form>
-    <div id="output" class="output1"></div>
+    <table class="table">
+        <thead>
+            <th>Activitiy Name</th>
+            <th>Activity Type</th>
+            <th>Date</th>
+            <th>location</th>
+            <th>submitted by</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div id="outputactN" class="tablecontent"></div></td>
+                <td><div id="outputactT" class="tablecontent"></div></td>
+                <td><div id="outputdate" class="tablecontent"></div></td>
+                <td><div id="outputlocation" class="tablecontent"></div></td>
+                <td><div id="outputsubmittedby" class="tablecontent"></div></td>
+            </tr>
+            <tr>
+                <td><div id="outputactN1" class="tablecontent"></div></td>
+                <td><div id="outputactT1" class="tablecontent"></div></td>
+                <td><div id="outputdate1" class="tablecontent"></div></td>
+                <td><div id="outputlocation1" class="tablecontent"></div></td>
+                <td><div id="outputsubmittedby1" class="tablecontent"></div></td>
+            </tr>
+        </tbody>
+    </table>
     <script>
     /*attempt to click outside the input field and I have lose my mind rn
         function isClickOutsideElement(event) {
@@ -101,7 +123,11 @@
                 const actT = document.getElementById('ActivityType').value;
                 const date = document.getElementById('Date').value;
                 const location = document.getElementById('location').value;
-                output.innerHTML = '<br><p>________________________________</p><p>Name : '+fullname+'</p><p>Student ID : '+ID+'</p><p>Email : '+email+'</p><p>Activity Name : '+actN+'</p><p>Activity Type : '+actT+'</p><p>Date : '+date+'</p><p>Location : '+location+'</p><p>________________________________</p>';
+                outputactN.innerHTML = '<p>'+actN+'</p>';
+                outputactT.innerHTML = '<p>'+actT+'</p>';
+                outputdate.innerHTML = '<p>'+date+'</p>';
+                outputlocation.innerHTML = '<p>'+location+'</p>';
+                outputsubmittedby.innerHTML = '<p>'+fullname+'</p><p>'+ID+'</p><p>'+email+'</p>';
             }
         }
     </script>
