@@ -35,11 +35,11 @@
         <!--Radio-->
         <label for="Satisfy" class="txt">Activity's Satisfaction</label><br>
         <!--choice-->
-        <input type="radio" id="Love" name="radio" class="radiocssfirst" value="Love">
+        <input type="radio" id="rate" name="radio" class="radiocssfirst" value="Love it!">
         <label for="radio" class="radiocontent">Love it!</label>
-        <input type="radio" id="neutral" name="radio" class="radiocss" value="neutral">
+        <input type="radio" id="rate" name="radio" class="radiocss" value="Neutral">
         <label for="radio" class="radiocontent">Neutral</label>
-        <input type="radio" id="least" name="radio" class="radiocss" value="least">
+        <input type="radio" id="rate" name="radio" class="radiocss" value="It's need some improvement">
         <label for="radio" class="radiocontent">Need improvement</label>
         <!--Submit + function output triggered-->
         <button type="submit" class="submit" onclick="output();">Submit</button>
@@ -60,31 +60,19 @@
                 <td><div id="outputlocation" class="tablecontent"></div></td>
                 <td><div id="outputsubmittedby" class="tablecontent"></div></td>
             </tr>
-            <!--<tr>
-                <td><div id="outputactN" class="tablecontent"></div></td>
-                <td><div id="outputactT1" class="tablecontent"></div></td>
-                <td><div id="outputdate1" class="tablecontent"></div></td>
-                <td><div id="outputlocation1" class="tablecontent"></div></td>
-                <td><div id="outputsubmittedby1" class="tablecontent"></div></td>
-            </tr>-->
+        </tbody>
+        <br>
+        <thead>
+            <th>Satisfaction</th>
+            <th class="bigmac">Placeholder</th>
+        </thead>
+        <tbody>
+            <td><div id="outputRadio" class="tablecontent"></div></td>
+            <td class="bigmacextrafried"><div id="outputsmth" class="extratablecontent"></div></td>
         </tbody>
     </table>
+
     <script>
-    /*attempt to click outside the input field and I have lose my mind rn
-        function isClickOutsideElement(event) {
-        var element = document.getElementById('Fullname');
-        var element2 = Fullname.event;
-        if (element.contains(event.element2)) {
-            return false;
-        } else {
-            return true;
-            }
-    }
-    Fullname.addEventListener('click', function(event));{
-        if (isClickOutsideElement(validatename())){
-        console.void('Clicked outside the element');
-        }
-    };*/
         function validatename(){
             var regname = /^[a-zA-Z]+ [a-zA-Z]+$/;
             var Fullname = document.getElementById('Fullname').value;
@@ -134,13 +122,17 @@
                 const actT = document.getElementById('ActivityType').value;
                 const date = document.getElementById('Date').value;
                 const location = document.getElementById('location').value;
+                /*How am I suppose to know that radio need to use querySelector lmao*/
+                const radio = document.querySelector('input[name="radio"]:checked').value;
                 outputactN.innerHTML = '<p>'+actN+'</p>';
                 outputactT.innerHTML = '<p>'+actT+'</p>';
                 outputdate.innerHTML = '<p>'+date+'</p>';
                 outputlocation.innerHTML = '<p>'+location+'</p>';
                 outputsubmittedby.innerHTML = '<p>'+fullname+'</p><p>'+ID+'</p><p>'+email+'</p>';
+                outputRadio.innerHTML = '<p>'+radio+'</p>'
             }
         }
+        /*จบงานนี้ถวายน้ำแดงให้ chatgpt กับ stackoverflow ด่วน*/
     </script>
     </body>
 </html>

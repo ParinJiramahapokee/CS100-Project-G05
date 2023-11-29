@@ -11,7 +11,7 @@ body, html {
   /*bg color*/
   .gradient {
     background: linear-gradient(300deg,#599cc3,#599ac3,#59C3C3,#88B7B5,#9bcac7,#9accca,#A7CAB1,#c1d6c6,#cce0d1,#ddccea,#d6c1e6,#b19ec0,#847996,#685980);
-    background-size: 240% 240%;
+    background-size: 300% 300%;
     animation: gradient-animation 17s ease infinite;
   }
   
@@ -90,7 +90,7 @@ body, html {
   /*text*/
   .header{
     margin-top: 40px;
-    margin-left: 40%;
+    margin-left: 26%;
     margin-bottom: 40px;
     font-size: 50px;
     color: #ffffff;
@@ -122,8 +122,8 @@ body, html {
   }
   .fnameinput{
     margin-left: 20px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
     color: #515856;
     font-family: 'Gill Sans', sans-serif;
   }
@@ -166,14 +166,15 @@ body, html {
     color: #515856;
   }
 
+  /*Can you make the placeholder one longer thx in advance!*/
   /*Table*/
   .table{
     border-collapse: collapse;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
     font-size: 20px;
     font-family: 'Gill Sans', sans-serif;
-    min-width: 400px;
+    min-width: 250px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
   }
   .table thead tr{
@@ -181,8 +182,8 @@ body, html {
     color: #EEF0F0;
   }
   .table td, .table th{
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 50px;
+    padding-right: 80px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -199,6 +200,18 @@ body, html {
   .tablecontent{
     color: #b19ec0;
     font-family: 'Gill Sans', sans-serif;
+    margin-left: 20px;
+  }
+  .extratablecontent{
+    color: #b19ec0;
+    font-family: inherit;
+    margin-left: auto;
+  }
+  .bigmac{
+    background-color: #b19ec0;
+  }
+  .bigmacextrafried{
+    background-color: #EEF0F0;
   }
 
   /*Hide arrow in number input box*/
