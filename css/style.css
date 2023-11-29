@@ -101,7 +101,7 @@ body, html {
   }
   .formbg{
     width: 500px;
-    height: 700px;
+    height: 600px;
     margin-top: 20px;
     margin-left: 31%;
     margin-bottom: 20px;
@@ -166,15 +166,13 @@ body, html {
     color: #515856;
   }
 
-  /*Can you make the placeholder one longer thx in advance!*/
   /*Table*/
   .table{
     border-collapse: collapse;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: auto;
     font-size: 20px;
     font-family: 'Gill Sans', sans-serif;
-    min-width: 250px;
+    max-width: 800px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
   }
   .table thead tr{
@@ -182,8 +180,8 @@ body, html {
     color: #EEF0F0;
   }
   .table td, .table th{
-    padding-left: 50px;
-    padding-right: 80px;
+    padding-left: 25px;
+    padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -200,19 +198,18 @@ body, html {
   .tablecontent{
     color: #b19ec0;
     font-family: 'Gill Sans', sans-serif;
-    margin-left: 20px;
+    margin: auto;
+    font-size: 16px;
   }
-  .extratablecontent{
-    color: #b19ec0;
-    font-family: inherit;
-    margin-left: auto;
-  }
+
+  /*
   .bigmac{
     background-color: #b19ec0;
   }
   .bigmacextrafried{
     background-color: #EEF0F0;
   }
+  */
 
   /*Hide arrow in number input box*/
   input::-webkit-outer-spin-button,
