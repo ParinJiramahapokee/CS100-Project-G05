@@ -4,14 +4,14 @@
         <div class="Header">Our activities form</div>
     </head>
     <body class="gradient">
-            <form id="form" action="" class="formbg">
+            <form id="form" action="" class="formbg">      
         <label for="Fullname" class="fname">Full name (in English) : </label>
-        <input type="text" id="Fullname" class="fnameinput" name="Fullname" required="required">
-        <input type="button" onclick="validatename();" value="check"><br>
+        <input type="text" id="Fullname" class="fnameinput" name="Fullname" placeholder="Name-surname" required="required" oninput="validatename();"><br>
+        <div id="validname" class="hiddentxt">*Invalid name.<br> Name must contain only English Alphabet <br> Including name and surname</div>
         <!--already change into type number-->
         <label for="StudentID" class="txt">Student ID : </label>
-        <input type="number" id="ID" name="ID" class="txtinput" required="required">
-        <input type="button" onclick="validateID();" value="check"><br>
+        <input type="number" id="ID" name="ID" class="inputID" placeholder="Student ID" required="required" oninput="validateID();"><br>
+        <div id="validID" class="hiddentxt">*Invalid ID given <br> ID must contain 10 numeric alphabet only</div>
         <label for="email" class="txt">Email (@dome) : </label>
         <input type="email" id="email" name="email" required="required" class="txtinput">
         <input type="button" onclick="validateEmail();" value="validate"><br>
@@ -69,26 +69,26 @@
         function validatename(){
             var regname = /^[a-zA-Z]+ [a-zA-Z]+$/;
             var Fullname = document.getElementById('Fullname').value;
-                if(!regname.test(Fullname)){
-                    alert('Invalid name given')
-                    alert('Please enter your full name (first & last name)')
-                    document.getElementById('Fullname').focus();
+            var validname = document.getElementById('validname');
+                if (!regname.test(Fullname)) {
+                    document.getElementById("validname").style.display = 'block';
+                    document.getElementById("Fullname").focus();
                 }
-                else{
-                    alert('Valid name given')
+                else {
+                    document.getElementById("validname").style.display = 'none';
+                    return true;
                 }
         }
         function validateID(){
             var regID = /^[6]+[0-6]+[0-9]+$/;
             var ID = document.getElementById('ID').value;
-                if(ID.length > 10 || ID.length < 10){
-                    alert("ID needs to contain 10 numeric characters")
-                }
-                else if(!regID.test(ID)){
-                    alert("Invalid ID given")
+                if(ID.length > 10 || ID.length < 10 || !regID.test(ID)){
+                    document.getElementById("validID").style.display = 'block';
+                    document.getElementById("ID").focus();
                 }
                 else{
-                    alert("Valid ID given")
+                    document.getElementById("validID").style.display = 'none';
+                    return true;
                 }
         }
         function validateEmail(){

@@ -99,6 +99,20 @@ body, html {
     text-transform: uppercase;
     font-family: header;
   }
+  .inputID{
+    margin-left: 99px;
+    margin-bottom: 30px;
+  }
+  .hiddentxt{
+    display: none;
+    color: #F73F5A;
+    font-family: inherit;
+    font-size: 12px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    margin-left: 240px;
+  }
+
   .formbg{
     width: 500px;
     height: 600px;
