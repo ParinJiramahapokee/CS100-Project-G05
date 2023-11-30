@@ -1,12 +1,32 @@
 <html>
     <head>
         <style>
+            .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            }
+            .left-column, .middle-column, .right-column {
+            width: 30%;
+            text-align: center;
+            }
             body{background-color: rgba(144, 91, 155, 0.911);}
         </style>
     </head>    
         <body>
-            <p>Home</p>
-
-            <img src="C:\Users\parin\CS100-Project-G05\image\group1.png" width="320" height="240" alt="Mai Bork">
+            <p1>Home</p1> 
+            <img src="C:\Users\parin\CS100-Project-G05\image\group1.png" width="150" height="320" alt="Mai Bork">
+          <div class="flex-container">
+            <div class="left-column">
+                <p2>Hello</p2>
+            </div>
+            <div class="middle-column">
+                <p3>Its me</p3>
+            </div>
+            <div class="right-column">
+                <p4>Mai Bork</p4>
+            </div>
+          </div>
         </body>
 </html>
