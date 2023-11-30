@@ -103,6 +103,26 @@ body, html {
     margin-left: 99px;
     margin-bottom: 30px;
   }
+  .inputemail{
+    margin-left: 63px;
+    margin-bottom: 30px;
+  }
+  .inputactN{
+    margin-left: 78px;
+    margin-bottom: 30px;
+  }
+  .inputactT{
+    margin-left: 88px;
+    margin-bottom: 30px;
+  }
+  .inputdate{
+    margin-left: 145px;
+    margin-bottom: 30px;
+  }
+  .inputlocation{
+    margin-left: 117px;
+    margin-bottom: 30px;
+  }
   .hiddentxt{
     display: none;
     color: #F73F5A;
@@ -115,7 +135,7 @@ body, html {
 
   .formbg{
     width: 500px;
-    height: 600px;
+    height: 700px;
     margin-top: 20px;
     margin-left: 31%;
     margin-bottom: 20px;
@@ -146,21 +166,6 @@ body, html {
     margin-bottom: 30px;
     font-family: 'Gill Sans', sans-serif;
     color: #515856;
-  }
-  .txtinput{
-    margin-left: 20px;
-    margin-bottom: 30px;
-    font-family: 'Gill Sans', sans-serif;
-    color: #515856;
-  }
-  .output1{
-    width: 500px;
-    height: 400px;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 31%;
-    margin-bottom: 20px;
-    font-family: 'Gill Sans', sans-serif;
   }
   .radiocssfirst{
     margin-left: 50px;

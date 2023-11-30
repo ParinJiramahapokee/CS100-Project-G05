@@ -11,14 +11,14 @@
         <!--already change into type number-->
         <label for="StudentID" class="txt">Student ID : </label>
         <input type="number" id="ID" name="ID" class="inputID" placeholder="Student ID" required="required" oninput="validateID();"><br>
-        <div id="validID" class="hiddentxt">*Invalid ID given <br> ID must contain 10 numeric alphabet only</div>
+        <div id="validID" class="hiddentxt">*Invalid ID given <br> ID must contain 10 numeric alphabet</div>
         <label for="email" class="txt">Email (@dome) : </label>
-        <input type="email" id="email" name="email" required="required" class="txtinput">
-        <input type="button" onclick="validateEmail();" value="validate"><br>
+        <input type="email" id="email" name="email" required="required" class="inputemail" placeholder="@dome.tu.ac.th" oninput="validateEmail();"><br>
+        <div id="validemail" class="hiddentxt">*Invalid Email<br> Email must contain @dome.tu.ac.th format</div>
         <label for="ActivityName" class="txt">Activity Name :</label>
-        <input type="text" id="ActivityName" name="ActivityName" class="txtinput" required="required"><br>   
+        <input type="text" id="ActivityName" name="ActivityName" class="inputactN" required="required"><br>   
         <label for="ActivityType" class="txt">Activity Type :</label>
-        <select id="ActivityType" name="ActivityType" class="txtinput"><br>
+        <select id="ActivityType" name="ActivityType" class="inputactT"><br>
           <option value="" disabled="" selected="">Select a type</option>
           <option value="Faculty Activity">Faculty Activity</option>
           <option value="FirstMeet">First Meet</option>
@@ -29,9 +29,9 @@
           <option value="Others">Others</option>
         </select><br>
         <label for="Date" class="txt">Date : </label>
-        <input type="date" id="Date" name="Date" required="required" class="txtinput"><br>
+        <input type="date" id="Date" name="Date" required="required" class="inputdate"><br>
         <label for="location" class="txt">Location : </label>
-        <input type="text" id="location" name="location" required="required" class="txtinput"><br>
+        <input type="text" id="location" name="location" required="required" class="inputlocation"><br>
         <!--Radio-->
         <label for="Satisfy" class="txt">Activity's Satisfaction</label><br>
         <!--choice-->
@@ -95,34 +95,14 @@
             var regEmail = /^[a-zA-Z.]+[@dome.tu.ac.th]+$/;
             var email = document.getElementById('email').value;
                 if(!regEmail.test(email)){
-                    alert("Invalid Email!!")
-                    return false;
+                    document.getElementById("validemail").style.display = 'block';
+                    document.getElementById("email").focus();
                 }
                 else{
-                    alert("Valid Email given")
+                    document.getElementById("validemail").style.display = 'none';
                     return true;
                 }
         }
-        /*function output(){
-            const form = document.getElementById('form')
-            const output = document.getElementById('output')
-                form.addEventListener('submit',function(event){});{
-                event.preventDefault();
-                const fullname = document.getElementById('Fullname').value;
-                const ID = document.getElementById('ID').value;
-                const email = document.getElementById('email').value;
-                const actN = document.getElementById('ActivityName').value;
-                const actT = document.getElementById('ActivityType').value;
-                const date = document.getElementById('Date').value;
-                const location = document.getElementById('location').value;
-                const radio = document.querySelector('input[name="radio"]:checked').value;
-                outputactN.innerHTML = '<p>'+actN+'</p>';
-                outputactT.innerHTML = '<p>'+actT+'</p>';
-                outputdate.innerHTML = '<p>'+date+'</p>';
-                outputlocation.innerHTML = '<p>'+location+'</p>';
-                outputsubmittedby.innerHTML = '<p>'+fullname+'</p><p>'+ID+'</p><p>'+email+'</p>';
-                outputRadio.innerHTML = '<p>'+radio+'</p>'
-            }*/
         function output(){
             //declared variables
                 event.preventDefault();
