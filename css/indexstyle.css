@@ -1,0 +1,83 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  @font-face {
+    font-family: header;
+    src: url("../font/crewniverse.woff");
+  }
+
+  /*bg color*/
+  .gradient {
+    background: linear-gradient(300deg,#599cc3,#599ac3,#59C3C3,#88B7B5,#9bcac7,#9accca,#A7CAB1,#c1d6c6,#cce0d1,#ddccea,#d6c1e6,#b19ec0,#847996,#685980);
+    background-size: 300% 300%;
+    animation: gradient-animation 17s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /*Index CSS*/
+  .header{
+    margin-top: 40px;
+    margin-left: 26%;
+    margin-bottom: 40px;
+    font-size: 50px;
+    color: #ffffff;
+    opacity: 0.7;
+    text-shadow: 0 0 8px #000000;
+    text-transform: uppercase;
+    font-family: header;
+  }
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.circular-image {
+    width: 450px;
+    height: 450px; 
+    border-radius: 50%; 
+    overflow: hidden;
+    image-rendering: auto;
+}
+.circular-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.left-column, .middle-column, .right-column {
+    width: 50%;
+    text-align: center;
+}
+.formbg2{
+  width: 450px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  /*box shadow*/
+  padding: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+  /*border radius fixed at 25px for Rounded corners*/
+  border-radius: 25px; 
+  opacity: 90%;
+} 
