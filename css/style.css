@@ -29,8 +29,8 @@ body, html {
 
   /*link button CSS*/
   .aback{
-    position:fixed;
-    margin-left: 40px;
+    position: fixed;
+    margin-left: 10px;
   }
 a{
   padding: 15px 40px;
@@ -86,6 +86,13 @@ a:hover::before{
   right: 15px;
 }
 /*End of link button CSS*/ 
+
+#section1 {
+  height: 1px;
+}
+#section2 {
+  height: 1px;
+}
 
   /*Submit button CSS*/
   .submit{
@@ -296,41 +303,3 @@ a:hover::before{
   -webkit-appearance: none;
   margin: 0;
   }
-
-  /*For Home Page*/
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-}
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.circular-image {
-    width: 425px;
-    height: 450px; 
-    border-radius: 50%; 
-    overflow: hidden;
-}
-.left-column, .middle-column, .right-column {
-    width: 50%;
-    text-align: center;
-}
-.formbg2{
-  width: 450px;
-  height: 200px;
-  margin-top: 20px;
-  margin-left: 30%;
-  margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  /*box shadow*/
-  padding: 10px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
-  /*border radius fixed at 25px for Rounded corners*/
-  border-radius: 25px; 
-  opacity: 90%;
-} 

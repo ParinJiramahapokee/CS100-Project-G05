@@ -1,14 +1,18 @@
 <html>
-<link rel="stylesheet" type="text/css" href="../css/style.css">
-
 <head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="icon" href="../image/ICO.ico" type="image/x-icon">
+    <div class="Header">Our activities form</div>   
     <div class="aback">
         <a href="../Index.html">Back</a>
+        <a href="#section1">Move Up</a>
+        <a href="#section2">View Table</a>
+        <a href="Form page.html">Reset</a>
     </div>
-    <div class="Header">Our activities form</div>
 </head>
 
 <body class="gradient">
+    <div id="section1"></div>
     <form id="form" action="" class="formbg">
         <label for="Fullname" class="fname">Full name (in English) : </label>
         <input type="text" id="Fullname" class="fnameinput" name="Fullname" placeholder="Name-surname"
@@ -53,6 +57,7 @@
         <!--Submit + function output triggered-->
         <button type="submit" class="submit" onclick="output();">Submit</button>
     </form>
+    <div id="section2"></div>
     <table class="table" id="table">
         <thead>
             <th>Activitiy Name</th>
