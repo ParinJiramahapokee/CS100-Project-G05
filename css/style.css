@@ -27,6 +27,66 @@ body, html {
     }
   }
 
+  /*link button CSS*/
+  .aback{
+    position:fixed;
+    margin-left: 40px;
+  }
+a{
+  padding: 15px 40px;
+  background: #ffffff;
+  opacity: 0.5;
+  border:0;
+  width: 60px;
+  border-radius: 25px;
+  color: #515856 ;
+  text-transform: uppercase;
+  font-family: helvetica;
+  font-size: 12px;
+  letter-spacing: 3px;
+  position: relative;
+  transition: all .4s cubic-bezier(-0.645, -0.045, -0.355, -1);
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+a::after,
+a::before{
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 0px;
+  transform: translateY(50%);
+    opacity: 0;
+  transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  text-decoration: none;
+}
+
+a::before{
+    content: "";
+    transform: rotate(45deg) translateX(50%);
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border-left: 1px solid #515856;
+    border-bottom: 1px solid #515856;
+    margin-top: 1px;
+}
+
+a:hover{
+  padding: 15px 60px 15px 20px;
+}
+
+a:hover::after,
+a:hover::before{
+  opacity: 1;
+  right: 15px;
+}
+/*End of link button CSS*/ 
+
   /*Submit button CSS*/
   .submit{
     padding: 15px 40px;
