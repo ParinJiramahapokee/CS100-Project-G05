@@ -80,12 +80,10 @@ hr.line {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
-
 .formbg2:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
 .formbg2::before {
   content: " ";
   display: block;
@@ -100,7 +98,6 @@ hr.line {
   z-index: -1;
   transition: transform .3s ease;
 }
-
 .formbg2 {
   position: relative;
 }
@@ -136,22 +133,18 @@ hr.line {
   align-items: center;
   justify-content: space-between;
 }
-
 .top-text {
   align-self: flex-start;
   margin-left: 40px;
 }
-
 .middle-text {
   align-self: center;
   margin-left: 40px;
 }
-
 .bottom-text {
   align-self: flex-end;
   margin-left: 40px;
 }
-
 .mid {
   margin-right: 25px;
 }
