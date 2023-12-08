@@ -149,6 +149,7 @@ hr.line {
   margin-right: 25px;
 }
 
+
 /*link button CSS*/
 a {
   padding: 15px 40px;
@@ -207,6 +208,71 @@ a:hover {
 
 a:hover::after,
 a:hover::before {
+  opacity: 1;
+  right: 15px;
+}
+
+/*End of link button CSS*/
+
+
+/*link button CSS*/
+button {
+  padding: 15px 40px;
+  background: #C0D6CF;
+  border: 0;
+  border-radius: 25px;
+  color: #515856;
+  text-transform: uppercase;
+  font-family: helvetica;
+  font-size: 12px;
+  letter-spacing: 3px;
+  position: relative;
+  transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+button::after,
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  text-decoration: none;
+}
+
+button::after {
+  width: 30px;
+  height: 1px;
+  background: #515856;
+  transform: translateX(-3px);
+  margin-top: 0px;
+  text-decoration: none;
+}
+
+button::before {
+  content: "";
+  transform: rotate(-135deg) translateX(50%);
+  width: 11px;
+  height: 11px;
+  background: transparent;
+  border-left: 1px solid #515856;
+  border-bottom: 1px solid #515856;
+  margin-top: -1px;
+}
+
+button:hover {
+  padding: 15px 60px 15px 20px;
+}
+
+button:hover::after,
+button:hover::before {
   opacity: 1;
   right: 15px;
 }
